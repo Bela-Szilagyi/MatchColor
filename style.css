@@ -6,3 +6,6 @@
     UMBER: #5B5941;
 */
 
+.cell:hover {
+    cursor: pointer;    
+}
