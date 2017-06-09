@@ -9,11 +9,11 @@
         <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
         <script src='MatchColorJS.js'></script>    
 
-        <select id="tableSize" onchange="getTableSize()">
+        <select id="tableSize" onchange="drawTable(this.id)">
+            <option selected> </option>
             <option value="2">2x2</option>
             <option value="4">4x4</option>
         </select>
-        <script> drawTable(); </script>
-    
+        <div id="table"></div>
     </body>
 </html>

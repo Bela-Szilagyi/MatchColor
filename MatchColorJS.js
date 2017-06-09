@@ -3,8 +3,8 @@ function main() {
 }
 
 function drawTable(size) {
-    // size=getTableSize();
-    table = '';
+    size = $('#' + size).val();
+    table = '<table>';
     for (var row = 0; row < size; row++ ) {
         table += '<tr>';
             for (var column = 0; column < size; column++) {
@@ -12,13 +12,11 @@ function drawTable(size) {
             } 
         table += '</tr>';
     }
-    document.write('<table>' + table + '</table>');
-}
-
-function getTableSize() {
-        var tableSize = $('#tableSize').val();
-        alert(tableSize);
-        drawTable(tableSize);
+    table += '</table>'
+    var newTable = $('#table')[0];
+    alert(newTable + table);
+    newTable.innerHTML = '' ;
+    newTable.innerHTML += table;
 }
 
 $(document).ready(main);
